@@ -10,8 +10,8 @@ This web application was built in PHP laravel framework. The application contain
     d.	Being Grouped by weekday & carrier.<br />
     
     
-## How to run the web application<br />
+## How to run the web application?<br />
 > **Run: php artisan serve <br />** 
 
-## How to test<br />
+## How to test the application?<br />
 > **Run: php artisan dusk  <br />** 
