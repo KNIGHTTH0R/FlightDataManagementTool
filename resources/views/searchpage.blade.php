@@ -14,8 +14,8 @@
         Flight type: 
        
         <label class="radio" >
-        <label class="radio">    <input type="radio" name="flight_type" value="Arrival" <?php if(isset($flight_type)){  if($request->get('flight_type')=="Arrival"){ echo("checked"); }  }else{ echo("checked");} ?>>     Arrival   </label>
-        <label class="radio">    <input type="radio" name="flight_type" value="Departure" <?php if(isset($flight_type)){  if($request->get('flight_type')=="Departure"){ echo("checked"); }  } ?>>     Departure  </label>
+        <label class="radio">    <input type="radio" name="flight_type" value="Arrival" <?php if(isset($flight)){  if($request->get('flight_type')=="Arrival"){ echo("checked"); }  }else{ echo("checked");} ?>>     Arrival   </label>
+        <label class="radio">    <input type="radio" name="flight_type" value="Departure" <?php if(isset($flight)){  if($request->get('flight_type')=="Departure"){ echo("checked"); }  } ?>>     Departure  </label>
         </label>
     </div>
 
@@ -23,23 +23,24 @@
 
 
     <div class="form-group">
-    
-        <input type="checkbox" id="select-schedule-date" name="select-schedule-date"  value="select-schedule-date" <?php if(isset($flight_type)){  if(strlen($select_schedule_date)>0){ echo("checked"); }  } ?>/></label>
+   
+  
+        <label><input type="checkbox" id="select-schedule-date" name="select-schedule-date"  value="select-schedule-date" <?php if(isset($flight)){  if(strlen($request->get('select-schedule-date'))>0){ echo("checked"); }  } ?>/></label>
         
-        Schedule date range: <input type="date" id="schedule-date-start" name="schedule-date-start"         min="2018-01-01" max="2020-12-31" value="<?php if(isset($flight_type)){  echo($request->get('schedule-date-start')); }else{ echo("2019-02-01");} ?>">
-        to <input type="date" id="schedule-date-end" name="schedule-date-end"      min="2018-01-01" max="2020-12-31" value="<?php if(isset($flight_type)){  echo($request->get('schedule-date-end')); }else{ echo("2019-02-20");} ?>">
+        Schedule date range: <input type="date" id="schedule-date-start" name="schedule-date-start"         min="2018-01-01" max="2020-12-31" value="<?php if(isset($flight)){  echo($request->get('schedule-date-start')); }else{ echo("2019-02-01");} ?>">
+        to <input type="date" id="schedule-date-end" name="schedule-date-end"      min="2018-01-01" max="2020-12-31" value="<?php if(isset($flight)){  echo($request->get('schedule-date-end')); }else{ echo("2019-02-20");} ?>">
     </div>
    
     <div class="form-group">
-        Carrier: <input type="text" name="carrier" class="form-control" placehoder="carrier" value="<?php if(isset($flight_type)){  echo($request->get('carrier')); } ?>">
+        Carrier: <input type="text" name="carrier" class="form-control" placehoder="carrier" value="<?php if(isset($flight)){  echo($request->get('carrier')); } ?>">
     </div>
 
     <div class="form-group">
-        Flight no: <input type="text" name="flight_no" class="form-control" placehoder="Flight no" value="<?php if(isset($flight_type)){  echo($request->get('flight_no')); } ?>">
+        Flight no: <input type="text" name="flight_no" class="form-control" placehoder="Flight no" value="<?php if(isset($flight)){  echo($request->get('flight_no')); } ?>">
     </div>
     
     <div class="form-group">
-        Aircraft type: <input type="text" name="aircraft_type" class="form-control" placehoder="Aircraft type" value="<?php if(isset($flight_type)){  echo($request->get('aircraft_type')); } ?>">
+        Aircraft type: <input type="text" name="aircraft_type" class="form-control" placehoder="Aircraft type" value="<?php if(isset($flight)){  echo($request->get('aircraft_type')); } ?>">
     </div>
 
     <div class="form-group">

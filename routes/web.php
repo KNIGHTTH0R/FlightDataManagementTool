@@ -11,10 +11,6 @@
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome'); //redirect to /resouce/views/welcome.xxxxxx
-// });
-// Route::get('/search', 'SearchingController@index');
-// Route::get('/getid/{ID}', 'SearchController@getID');
+
 Route::resource('/', 'SearchingController');  // redirect to function create in searchingController
 Route::resource('/summary/', 'summaryInfo');  // redirect to function create in searchingController

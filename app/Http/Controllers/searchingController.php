@@ -29,8 +29,7 @@ class searchingController extends Controller
      */
     public function create()
     {
-        //
-        // return view('searchpage');
+       
     }
 
     /**
@@ -49,7 +48,7 @@ class searchingController extends Controller
         $flight_no=$request->get('flight_no');
         $aircraft_type=$request->get('aircraft_type');
         $select_schedule_date=$request->get('select-schedule-date');
-        // if(strlen($select_schedule_date)){$select_schedule_date=True;  }
+        
        
         
         
@@ -69,10 +68,7 @@ class searchingController extends Controller
         }
     
         $flight=$query->get();
-        // $flight=$query->paginate(15);
        
-        // keep values in search form
-        // $request->flash();
 
 
         
